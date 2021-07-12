@@ -1,0 +1,23 @@
+# Monitoring and Logging
+
+- Flow Logs
+    - track http requests and data
+    - Timestamp, bytes, IP address
+- Audit Logs (Previously known as activity logs)
+    - Record GCP activities
+    - Who did what when
+    - creating a firewall, creating an instance, adding a user
+- Cloud Logs (Previously stackdriver logs)
+    - Application logs
+    - Logs written by an application stored in the cloud
+    - Only lasts 30 days
+- Cloud Monitoring (Previously stackdriver monitoring)
+    - Health checks and metrics of your GCP infrastructure
+    - What is currently up and running, what is healthy, cpu usage, disk usage etc....
+- Cloud Trace (Previously stackdriver trace)
+    - Tracks and collects latency data
+    - How long an endpoint takes to respond 
+
+### Other Types
+    - SQL binary logging
+        - keeps a record of all transactions
