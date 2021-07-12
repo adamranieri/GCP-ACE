@@ -1,0 +1,6 @@
+runtime: custom
+env: flex
+service: spanish
+
+manual_scaling:
+  instances: 2
