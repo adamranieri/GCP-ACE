@@ -95,3 +95,13 @@
             - source tags
 - Subnets are regional
 
+# Load Balancers
+    - Load Balancers split traffic to different instances
+    - HTTP(S) Load Balancer
+        - Handles HTTP and HTTPS requests
+        - Treats every request as a new request
+    - TCP Proxy Load Balancer
+        - Handles not HTTP or HTTPS TCP requests
+    - SSL (Secure Socket layer) Proxy Load Balancer
+        - Handles HTTP requests
+        - Different from HTTPS load balancer as the SSL will connect a single user to a single instance

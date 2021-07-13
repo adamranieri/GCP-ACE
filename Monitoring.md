@@ -21,3 +21,9 @@
 ### Other Types
     - SQL binary logging
         - keeps a record of all transactions
+
+# Log Sinks
+    - Logs can be sent to 3 locations
+        - Big Query
+        - Pub/Sub
+        - Cloud Storage

@@ -21,6 +21,10 @@
 
 
 ```bash
-kubectl expose deployment hello-app --type LoadBalancer --port 80 --targetPort 8080
+    kubectl expose deployment hello-app --type LoadBalancer --port 80 --targetPort 8080
 
+```
+
+```bash
+    kubectl delete pods <pod>
 ```

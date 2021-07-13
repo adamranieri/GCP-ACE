@@ -57,7 +57,7 @@
     gsutil cp localfile gs://bucketname
 ```
 
-### Dowload
+### Download
 ```bash
     gsutil cp gs://bucketname/something.txt .
 ```
@@ -67,4 +67,9 @@
     gsutil acl set 
     gsutil acl ch 
     gsutil acl get
+```
+
+#### Get metadata
+```bash
+    gsutil stat gs://bucketname/object
 ```

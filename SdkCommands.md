@@ -30,6 +30,10 @@
     #gcloud hierarchy,
     gcloud compute instances list
 ```
+```bash
+    # Get information on who is logged in this sdk and what project you are on
+    gcloud config list
+```
 
 # Cloud Storage
 - Use **gsutil** command
