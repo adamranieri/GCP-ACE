@@ -9,6 +9,10 @@
     gcloud auth login
 ```
 
+```bash
+    gcloud auth list
+```
+
 # Get help
 ```bash
     gcloud help something

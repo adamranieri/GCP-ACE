@@ -1,5 +1,13 @@
 # Identity Access Management
 
+# The 3 A's of Security
+- Authentication
+    - Is this person who they claim to be
+- Authorization
+    - Does this person have persmission 
+- Auditing
+    - Who did what when
+
 ### Overview
     - IAM is used to control who can do what in GCP
     - You should follow the least privellage principle
@@ -85,3 +93,12 @@
 
 
 - By Default Project resources cannot access each other
+
+# Google Identity
+- Provides identification for users without g-suite of google accounts
+
+# Security Key Enforcement
+- Multi Factor Authentication
+
+# Cloud Identity Aware Proxy (IAP)
+- Protect endpoints with identity verification

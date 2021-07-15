@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: hello-world-deployment #Arbitrary
+spec:
+  replicas: 3 # How many versions of the pod we want
+  selector: # select which pods to replicate
+    matchLabels:
+      app: greeting
+  template: # This starts the information about the what is in the pod and its labels
+    metadata:
+      labels:
+        app: greeting # Give pods these labels
+    spec:
+      containers:
+      - name: hello-app # Arbitrary
+        image: adaman94/hello-app
+        ports:
+        - containerPort: 300

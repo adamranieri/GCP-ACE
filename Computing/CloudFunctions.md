@@ -1,4 +1,19 @@
 # Cloud Function
+- Run a code snippet in response to an event
+- Only supports some languages
+    - node.js
+    - Python
+    - Go
+    - Java
+- Serverless FaaS (Functions as a service)
+    - Very scalable
+    - Great for applications that have very variable traffic
+    - Acting as glue code to connect things together
+- Every function gets its own HTTP endpoint
+- Events include but not limited to
+    - pub/sub
+    - Google Cloud storage operations
+    - direct invocation
 - pricing
     - Execution Time
     - Invocations

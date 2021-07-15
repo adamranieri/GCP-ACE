@@ -105,3 +105,42 @@
     - SSL (Secure Socket layer) Proxy Load Balancer
         - Handles HTTP requests
         - Different from HTTPS load balancer as the SSL will connect a single user to a single instance
+
+# Google Domains
+- Register a Domain with Google Domains
+- Private whois
+
+# Cloud DNS
+- DNS service
+- 100% uptime
+
+# Cloud Load Balancing
+- Service for doing load balances
+- Has a static IP
+- However because of Google's network traffic is still directed to the nearest entry point to google's network
+
+# Cloud CDN
+- Cache data at different geographic locations all around the world
+- Can reduce latency and reduce cost as there is less traffic being sent to the other side of the world
+
+# Cloud Interconnect
+- Connect external infrastracture to cloud resources
+
+# Cloud Dedicated Interconnect
+- Connect physically to a GCP VPC and your own data center
+
+# CDN Interconnect
+- Use a CDN that is not part of Google's CDN
+
+# Cloud VPN
+- Googles VPN service
+
+# Static IP
+- Reserve static IPs and assign them to resources
+
+
+# CLI commands
+
+```bash
+gcloud compute networks subnet describe {subnet-name} --region=central-us1
+```

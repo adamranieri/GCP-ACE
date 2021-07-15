@@ -27,3 +27,6 @@
         - Big Query
         - Pub/Sub
         - Cloud Storage
+
+# Cloud Billing API
+- Programmtically mangage billing

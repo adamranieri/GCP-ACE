@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod # what type of resource we are creating
+metadata:
+  name: hello-world-pod1 #Arbitrary name
+  labels: # labels are arbitrary key value pairs. Used by selectors to find pods
+    app: greeting 
+    language: english
+spec:
+  containers:
+  - name: hello-app # Arbitrary name
+    image: adaman94/hello-app # Docker Image
+    ports:
+    - containerPort: 3000 # port that the app in the container listens on
+
