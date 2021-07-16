@@ -71,6 +71,14 @@
         - Project 
             - Resource
 
+### Service Accounts
+- Service Accounts are the primary way of giving credentials to resources
+- You can have GCP generate keys (reccomended)
+- You can generate your own but GCP limits this to 10
+    - Primarily just for key rotation
+- A compute engine instance will have a default service account if not selected
+    - You can delete the default service account
+
 ```json
 {
     "bindings":[

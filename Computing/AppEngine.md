@@ -28,6 +28,7 @@
         - Pricier
         - Can be customized for any runtime environment
         - Cannot scale as fast
+        - Because the app runs in a container logging should be done to stdout or stderr and the logs will automatically be picked up
 
 - Main configuration file is an app.yaml stored with the project code
     - put in root directory

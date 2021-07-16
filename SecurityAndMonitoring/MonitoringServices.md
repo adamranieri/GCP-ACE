@@ -17,6 +17,8 @@
 - Cloud Trace (Previously stackdriver trace)
     - Tracks and collects latency data
     - How long an endpoint takes to respond 
+- Error Reporting
+    - For logging stack traces in an application
 
 ### Other Types
     - SQL binary logging

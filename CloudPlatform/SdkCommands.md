@@ -12,6 +12,11 @@
 ```bash
     gcloud auth list
 ```
+# Set Project
+
+```bash
+    gcloud config set project myProject
+```
 
 # Get help
 ```bash
@@ -46,3 +51,13 @@
     gsutil mb awesomebucket
 ```
 
+# Billing
+```bash
+    gcloud beta billing
+```
+
+# Enabling a service
+```bash
+    gcloud services enable xyz.googleapis.com
+    gcloud services enable xyz
+```

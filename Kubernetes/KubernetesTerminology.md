@@ -65,13 +65,27 @@
     - They require an **Ingress Controller** to work
     - Nginx is an example
 
+# Quick cheat sheet
+
+- **kubectl get** - list resources
+- **kubectl describe** - show detailed information about a resource
+- **kubectl logs** - print the logs from a container in a pod
+- **kubectl exec** - execute a command on a container in a pod
+
 
 
 ```bash
     kubectl expose deployment hello-app --type LoadBalancer --port 80 --targetPort 8080
+```
 
+```bash
+    kubectl describe pods mypodname
 ```
 
 ```bash
     kubectl delete pods <pod>
+```
+
+```bash
+    kubectl scale --replicas=5 rs/target-replicaset
 ```
