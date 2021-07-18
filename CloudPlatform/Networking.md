@@ -81,7 +81,7 @@
     - You can have a host project that owns the VPC and service projects can use that VPC
     - Routes
         - Instance level tags
-    - Firewawll rules
+    - **Firewall rules**
         - Filter/block traffic on a network
         - Restrictive by default
             - No traffic allowed in
@@ -93,6 +93,8 @@
             - IP ranges
             - service account
             - source tags
+        - Firewall rules can have priorities
+            - The lower the number the higher the priority
 - Subnets are regional
 
 # Load Balancers

@@ -7,14 +7,17 @@
     - Can create snapshots of the disk
     - Can be configured automatically
 - New Instance Creation Sequence
+    0. A service account will be created or must already exist
     1. A host machine will allocate space for a vm
         - The instance is in the *Provisioning* state
     2. After space is provisioned a network adaptor is configured for the instance
         - The instance is in the *Staging* state
     3. Boot the OS and get the metadata
         - The instance is in the *Running* state
-    4. The startup script begins
+    4. gcloud command to start the instance is complete
+    5. The startup script begins
         - Startup script can be set as a metadata tag
+         
 - Running an application on a compute engine
     - Applications can use the SDK on the computer engine
     - They can query the metadata of the instance

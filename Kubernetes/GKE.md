@@ -5,3 +5,5 @@
     - Access must be done more manually
         - Keys, credetnial json etc..
 
+- Depolyments do not encounter fatal errors.
+    - The pods they control do

@@ -7,6 +7,12 @@
     - Record GCP activities
     - Who did what when
     - creating a firewall, creating an instance, adding a user
+    - Types of logs
+        - Configuration (commissing resources, editing permissions)
+        - Billing
+        - Data Access
+        - Development (application logs)
+        - Monitoring
 - Cloud Logs (Previously stackdriver logs)
     - Application logs
     - Logs written by an application stored in the cloud

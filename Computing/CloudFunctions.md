@@ -14,9 +14,3 @@
     - pub/sub
     - Google Cloud storage operations
     - direct invocation
-- pricing
-    - Execution Time
-    - Invocations
-        - default 1000 invocations/second
-    - Bandwith
-    - Type

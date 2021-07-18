@@ -69,7 +69,7 @@
 - Organization 
     - Folder (optional)
         - Project 
-            - Resource
+            - Resource (Service account level)
 
 ### Service Accounts
 - Service Accounts are the primary way of giving credentials to resources
@@ -78,6 +78,9 @@
     - Primarily just for key rotation
 - A compute engine instance will have a default service account if not selected
     - You can delete the default service account
+
+### Predefined roles
+- 
 
 ```json
 {

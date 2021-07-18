@@ -67,6 +67,8 @@
     gsutil acl set 
     gsutil acl ch 
     gsutil acl get
+    gsutil acl ch -u AllUsers:r gs://wassup/cheatsheet.png
+    
 ```
 
 #### Get metadata
