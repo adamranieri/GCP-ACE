@@ -1,6 +1,5 @@
-
-# Types of Storage
-- Object Storage
+# Types of Storage 
+- Object Storage 
      - Store things in terms of objects/blobs
      - These objects are stored in buckets
      - Each Object is individually addressable
@@ -27,3 +26,4 @@
 |Local Disk | Block | Yes | milleseconds | No |
 | GCS | Object | No | milleseconds to seconds | Yes |
 | Filestore | File | No | milleseconds | Yes |
+| Memorystore | Cache | No | nanoseconds | No

@@ -1,5 +1,7 @@
 # Cloud Function
 - Run a code snippet in response to an event
+- NOT suitable for long running processing 
+- NOT ideal for synchronous workloads
 - Only supports some languages
     - node.js
     - Python

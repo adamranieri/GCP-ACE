@@ -4,6 +4,32 @@
 - gsutil is for a cloud storage
     - gsutil is actually a python application
 
+# Common Verbs
+- list
+- describe
+
+# Global Flags
+- These are flags that can be used on all* gcloud commands 
+    - All that it would make sense for the flag to do something
+- --account
+    - --acount=otherperson@dev.com
+    - used to override the current account being used
+- --configuration
+    - used to override current configuaration
+- --format
+    - --format=json
+    - how to display the output of a command
+    - json,xml,csv,yaml and a bunch of others
+- --flatten
+    - split up a key
+- --project
+    - override what project this command refers to
+- --quiet
+    - disable interactive prompts and use defaults
+- --verbosity
+    - --verbosity=error
+
+
 # login
 ```bash
     gcloud auth login

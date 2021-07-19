@@ -44,18 +44,22 @@
         - Usually for a certain feature or job (appengine.deployer has read and configuration access)
     - Custom role
         - custom role created for project
-- **Member**
+- **Identity**
+    - An identity is an email address record that connects to a person, resource or group
     - An entity that will use GCP resources
         - user
             - A person
+            - jane@joespizza.com
         - serviceAccount
             - Some GCP Resource
+            - awesomeserver@joespizza.com
         - group
             - A collection of users and/or serviceAccounts
                 - developers@joespizza.com
                 - authservers@joespizza.com
         - domain
             - Anyone with a specic email address domain
+            - @joespizza.com
         - authenticatedUsers
             - Anyone with a GCP account
         - allUsers
@@ -72,6 +76,12 @@
             - Resource (Service account level)
 
 ### Service Accounts
+- Service account have a dual role
+    - Sometimes they are an **Identity**
+        - awesomeserver@joespizza.com is a vm that has certain roles 
+    - Sometimes they are a **Resource**
+        - kim@joedevtem.com can be granted an editor role to awesomeserver@joespizza.com w
+        - Kim can now edit awesomeserver@joespizza.com service account
 - Service Accounts are the primary way of giving credentials to resources
 - You can have GCP generate keys (reccomended)
 - You can generate your own but GCP limits this to 10

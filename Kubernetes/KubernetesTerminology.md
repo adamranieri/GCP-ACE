@@ -1,12 +1,46 @@
+# Cluster
+- A collection of nodes controlled by kubernetes
+- A cluster has a master node that is the effective brain and command center of the cluster
+
+# Node
+- A VM (Physical computer if on premise) that is in a cluster
+- A node runs an agent/software called **kubelet** which connects it the master node
+
+# Controller
+- Manages a pod(s)
+- **ReplicaSet** is responsible for how many instances of a pod there are
+- Eviction
+    - Kubernetes shutting down a pod
+- Preemption
+    - Kubenetes evicts a Pod because resouces are needed for a higher priority pod
+
 # Pod
-- Smallest atomic unit of computing in a cluster.
+- Smallest atomic unit of computing in a cluster
+    - A self contained running process
+    - A house for an application 
 - Consists of one to many containers
     - Most pods run only a single container
     - Only containers that are very tightly coupled are put in the same pod
-        - This is an advanced use case
+        - This is an advanced use case    
+- Pod Statuses
+    - Pending
+        - Pod is downloading images
+    - Running
+    - Completed
+        - Gracefully terminated
+    - Failed
+        - Fatal Error
+    - Unknown
+        - Cannot be reached
+- Pods should be ephemeral and created or destroyed as needed
+- Pods run as if they their own self-isolated VM
+    - You can don't worry about port conlficts etc...
+- A pod runs on a node
+
 
 # Service
-- Exposes pods
+- Exposes pods to the outside intenet or to other pods
+- The goal is to decouple reliance on a particular pod
 - Pods in the cluster are not reachable from outside the cluster
 - Services must be used to allows pods access to other pods or to the outside internet
 - Service Types
@@ -45,13 +79,22 @@
 # Workload
 - Manages a group of pods
 - Types of Workloads
-    - **Deployment** or ReplicaSet
-        - For managing **stateless** pods
-        - Kubernetes docs says to use Deployment unless you have a specific reason to use ReplicaSet
+    - **Deployment** 
+        - A released version of application code
+        - Kubernetes docs recommend Deployment unless you have a specific reason to use ReplicaSet
+            - A deployment is a "higher level concept"
+            - The amount of replicas is *part of* a deployment just like what version of the container image to is *part of* the deployement
+        - Deployment can be in one of three states
+            - Progressing
+                - In the process of deploying
+            - Completed
+                - Successfully running
+            - Failed
+                - Fatal error while deploying
     - StatefulSet
-        - For managing pods that have **persistent volumes**
+        - For managing pods that have stateful aspects like session handling
     - DaemonSet
-        - For managing pods that must run on a **specic node**
+        - For managing pods that must run on a **specfic node** or one pod on each node
     - Job and CronJob
         - For pods that that runs **until complete**
         - Example a pod that reads a database to create a report it sends to a bucket
@@ -74,9 +117,7 @@
 
 
 
-```bash
-    kubectl expose deployment hello-app --type LoadBalancer --port 80 --targetPort 8080
-```
+
 
 ```bash
     kubectl describe pods mypodname
@@ -86,6 +127,19 @@
     kubectl delete pods <pod>
 ```
 
+### Create a deployment
 ```bash
-    kubectl scale --replicas=5 rs/target-replicaset
+    kubectl run hello-app --image=awesome-app --port=8080
 ```
+### Deployment Actions (modifies a running deployment)
+```bash
+    kubectl scale deployment hello-app --replicas=5 
+```
+```bash
+    kubectl expose deployment hello-app --type LoadBalancer --port 80 --targetPort 8080
+```
+```bash
+    kubectl auto-scale deployment hello-app --min 2 --max 5 --cpu-percent 75
+```
+
+
