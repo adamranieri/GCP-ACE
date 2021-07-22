@@ -5,3 +5,14 @@
 - RDBMS
     - MySQL
     - Postgres
+
+```bash
+gcloud sql intances patch mysqldb
+
+gcloud sql backups create --instance mysqldb
+
+gcloud sql export sql mysqldb gs://mybucket/data.sql --database=mysql
+gcloud sql export csv mysqldb gs://mybucket/data.csv --database=mysql
+
+gcloud sql import sql mysqldb gs://mybucket/data.sql --database=mysql
+```

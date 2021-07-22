@@ -9,9 +9,14 @@
     - Who did what when
 
 ### Overview
-    - IAM is used to control who can do what in GCP
-    - You should follow the least privellage principle
-        - Assign the minimum privileages possible to achieve the job 
+- IAM is used to control who can do what in GCP
+- **least privellage principle**
+    - Assign the minimum privileages possible to achieve the job 
+- **seperation of duties**
+    - A task should be split by multiple people to prevent fraud and errors
+- **layers of defense**
+    - Security should be redundant and done at every level
+
 
 ## Key Terminology
 - **Resource**
@@ -75,6 +80,12 @@
         - Project 
             - Resource (Service account level)
 
+**Access Scopes**
+- Not direclty connected to scopes of policies
+- legacy system of vms
+- Scopes say what vms can do.
+    - Both the scope and the service account must give access 
+
 ### Service Accounts
 - Service account have a dual role
     - Sometimes they are an **Identity**
@@ -108,6 +119,18 @@
 ```
 ```bash
     gcloud projects add-iam-policy-binding joespizza --member='user:test-user@gmail.com' --role='roles/editor'
+```
+
+```bash
+    gcloud projects get-iam-policy joespizza
+```
+
+```bash
+    gcloud iam roles describe roles/appengine.serviceAgent
+```
+
+```bash
+    gcloud iam roles create
 ```
 
 

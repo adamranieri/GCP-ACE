@@ -1,8 +1,12 @@
 
 # gcloud vs gsutil
 - most commands start with gcloud
-- gsutil is for a cloud storage
-    - gsutil is actually a python application
+    - gsutil for Cloud Storage
+        - gsutil is actually a python application
+    - bq for BiqQuery
+    - cbt for Bigtable
+    
+
 
 # Common Verbs
 - list
@@ -86,4 +90,8 @@
 ```bash
     gcloud services enable xyz.googleapis.com
     gcloud services enable xyz
+```
+
+```bash
+    gcloud components insall cbt
 ```

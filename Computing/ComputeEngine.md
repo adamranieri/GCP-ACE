@@ -57,10 +57,17 @@
 - Use snapshots to create backups and promote resusability
 
 
-# Marketplace
+# Marketplace (Cloud Launcher)
 - Previously called Launcher
 - Quickly get custom images 
-
+```yaml
+resources:
+- type: compute.v1.instance
+  name: awesome-vm
+```
+```bash
+    gcloud deployment-manager deployments create quickstart-deployment --config config.yaml
+```
 
 # TidBits
 - Startup scripts execute everytime you restart an instance
@@ -131,4 +138,14 @@ glcoud compute instance-templates create hello-template --source-instance=hello-
 # Instance Templates
 ```bash
     gcloud compute instance-templates
+```
+
+```bash
+    gcloud compute networks create my-vpc --subnet-mode=auto
+
+    gcloud compute firewall rules create
+    gcloud compute firewall-rules create express-app –-network devnet –-allow tcp:3000
+    gcloud compute shared-vpc 
+    # you can applay a single vpc to multiple projects or folders
+    
 ```

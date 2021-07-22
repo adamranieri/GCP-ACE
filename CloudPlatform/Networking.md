@@ -25,6 +25,7 @@
                 - CIDR notation 201.42.170.175/16
             - Network: 11001001.00101010 is the network
             - Host: 10101010.10101111
+
 - Classes Inter-Domain Routing CIDR
     - IP address are split into network and host
     - The CIDR notation lets you know what bits are reserved for the network and host(server)
@@ -95,26 +96,61 @@
             - source tags
         - Firewall rules can have priorities
             - The lower the number the higher the priority
+            - 0 is highest
+            - 65535 is lowest
+            - Defaul trules have a priority of 65534 
 - Subnets are regional
+    - when networks are autocreated they create a subnet in each region
 
 # Load Balancers
     - Load Balancers split traffic to different instances
     - HTTP(S) Load Balancer
+        - External 
         - Handles HTTP and HTTPS requests
         - Treats every request as a new request
     - TCP Proxy Load Balancer
-        - Handles not HTTP or HTTPS TCP requests
+        - External or internal
+        - Handles non HTTP or HTTPS TCP requests
     - SSL (Secure Socket layer) Proxy Load Balancer
         - Handles HTTP requests
         - Different from HTTPS load balancer as the SSL will connect a single user to a single instance
+```bash
+    gcloud compute target-pools add-instances my-vm-pool --instances vm1,vm4
+    gcloud compute forwarding-rules create my-lb --port=80 --target-pool=my-vm-pool
+
+    gcloud compute networks subnets expand-ip-range my-subnet --prefix-length 12
+    
+```
 
 # Google Domains
 - Register a Domain with Google Domains
 - Private whois
 
 # Cloud DNS
-- DNS service
+- Google's Domain Name Service
+- Domain names are how humans can remember and get websites
+    - google.com not 127.32.33.12
+- There are a few root DNS servers in the world
+    - These servers are a dictionary of domain names connected to IP addresses
+- The process for client
+    1. The client makes a request for cnn.com in the browser
+    2. The browser makes a request to the nearest DNS server to see what IP is cnn.com
+    3. The browser caches that information locally
+    4. future requests from that browser for cnn.com go to the IP address
+- The process for the website hoster
+    1. Buy a domain name
+    2. Add a record to the DNS root server connecting your domain to an IP
+        - This is for A type records
+    3. Set a time to live for the record
+        - How often the root server will check your record to see that the IP has not changed
 - 100% uptime
+
+```bash
+    gcloud dns records-set transaction start --zone=my-zone
+    gcloud dns records-set transaction add 192.34.32.43 --name=awesome.com --ttl=300 --type=A --zone=my-zone
+
+```
+
 
 # Cloud Load Balancing
 - Service for doing load balances
@@ -136,6 +172,7 @@
 
 # Cloud VPN
 - Googles VPN service
+- Allows you to securely send traffic to and from your network to Google's network
 
 # Static IP
 - Reserve static IPs and assign them to resources

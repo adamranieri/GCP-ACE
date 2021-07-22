@@ -1,6 +1,9 @@
 # GCS Google Cloud Storage
 - Primary service for storing files/**objects**
     - Analogous to S3 for AWS
+    - Objects are atomic units. It does cannot edit or read just part of an object
+    - objects can be versioned
+        - Lastest version is called the live version
 - **Buckets** are a collection of objects
 - Bucket names must be gloablly unique
 - Files are private by default 
@@ -74,4 +77,8 @@
 #### Get metadata
 ```bash
     gsutil stat gs://bucketname/object
+```
+
+```bash
+    gsutil rewrite -s coldline gs://mybucket/something.txt
 ```
