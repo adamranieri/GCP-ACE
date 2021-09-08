@@ -143,7 +143,7 @@ glcoud compute instance-templates create hello-template --source-instance=hello-
 ```bash
     gcloud compute networks create my-vpc --subnet-mode=auto
 
-    gcloud compute firewall rules create
+    gcloud compute firewall-rules create
     gcloud compute firewall-rules create express-app –-network devnet –-allow tcp:3000
     gcloud compute shared-vpc 
     # you can applay a single vpc to multiple projects or folders

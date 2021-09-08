@@ -1,6 +1,0 @@
-[
-    {
-        "prompt":"Create a compute engine resource with a standard-n1 machine type and a name of app-server",
-        "answer":"gcloud compute instances create --machine-type=standard-n1 app-server"
-    }
-]

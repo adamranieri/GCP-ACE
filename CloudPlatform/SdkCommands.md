@@ -56,7 +56,7 @@
 # Get IAM roles
 ```bash
     #gcloud project get-iam-policy {projectID}
-    gcloud project get-iam-policy joespizza
+    gcloud projects get-iam-policy joespizza
 ```
 
 # Add policy

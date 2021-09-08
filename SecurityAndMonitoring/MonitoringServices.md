@@ -27,14 +27,14 @@
     - For logging stack traces in an application
 
 ### Other Types
-    - SQL binary logging
-        - keeps a record of all transactions
+- SQL binary logging
+    - keeps a record of all transactions
 
 # Log Sinks
-    - Logs can be sent to 3 locations
-        - Big Query
-        - Pub/Sub
-        - Cloud Storage
+- Logs can be sent to 3 locations
+    - Big Query
+    - Pub/Sub
+    - Cloud Storage
 
 # Cloud Billing API
 - Programmtically mangage billing
